@@ -38,6 +38,12 @@ if (!empty($hide_switch_box)) {
     $_atts['class'] .= ' no_switch_box';
 }
 
+$icon_size = trim((string) us_replace_dynamic_value($icon_size ?? '20px', FALSE));
+if (!preg_match('/^\d+(?:\.\d+)?(?:px|em|rem|%|vw|vh|vmin|vmax|ch|ex)$/i', $icon_size)) {
+    $icon_size = '20px';
+}
+$_atts['style'] .= '--himuon-switch-icon-size:' . esc_attr($icon_size) . ';';
+
 if ($inactive_switch_bg) {
     $_atts['style'] .= '--color-inactive-switch-bg:' . us_get_color($inactive_switch_bg, TRUE) . ';';
 }
@@ -94,6 +100,7 @@ if (empty($himuon_color_switch_base_css_output)) {
     $scheme_output .= '<style id="himuon-color-switch-base-css">';
     $scheme_output .= '.w-color-switch-before,.w-color-switch-after{margin:0!important;}';
     $scheme_output .= '.w-color-switch-box{margin-inline:.5rem;}';
+    $scheme_output .= '.w-color-switch-before-icon svg,.w-color-switch-after-icon svg{width:var(--himuon-switch-icon-size,20px);height:var(--himuon-switch-icon-size,20px);}';
     $scheme_output .= '</style>';
 }
 
@@ -118,8 +125,6 @@ $sanitize_inline_svg = static function ($svg_raw) {
         'svg' => array(
             'class' => TRUE,
             'style' => TRUE,
-            'width' => TRUE,
-            'height' => TRUE,
             'viewbox' => TRUE,
             'xmlns' => TRUE,
             'xmlns:xlink' => TRUE,

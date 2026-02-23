@@ -31,6 +31,12 @@ $after_icon_param = array(
         'extension' => 'svg',
         'std' => '',
     ),
+    'icon_size' => array(
+        'title' => __('Icon Size', 'us'),
+        'description' => __('Set one CSS size for both icon width and height (for example: 20px, 1.25rem, 100%).', 'us'),
+        'type' => 'text',
+        'std' => '20px',
+    ),
     'icon_visibility_by_switch_state' => array(
         'title' => __('Show Only Active Side Icon', 'us'),
         'description' => __('When enabled: switch OFF hides the "after" icon, switch ON hides the "before" icon.', 'us'),

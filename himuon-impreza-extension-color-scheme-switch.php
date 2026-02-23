@@ -2,8 +2,8 @@
 
 /**
  * Plugin Name:       Himuon Impreza Color Scheme Switch SVG Extension
- * Description:       Adds SVG icon support to the Impreza Color Scheme Switch, with custom before/after labels, state-based icon visibility, and optional switch box hiding.
- * Version:           1.0.0
+ * Description:       Adds SVG icon support to the Impreza Color Scheme Switch, with custom before/after labels, configurable icon size, state-based icon visibility, and optional switch box hiding.
+ * Version:           1.1.0
  * Author:            Reagan Mahinay
  * Author URI:        https://reagandev.com
  * License:           GPL-2.0+
