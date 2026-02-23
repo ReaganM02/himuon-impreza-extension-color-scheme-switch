@@ -1,7 +1,7 @@
-# Himuon Impreza Color Scheme Switch SVG Extension
 
 ![Plugin Thumbnail](https://raw.githubusercontent.com/ReaganM02/himuon-impreza-extension-color-scheme-switch/main/thumbnail.jpg)
 
+# Himuon Impreza Color Scheme Switch SVG Extension
 
 Adds SVG icon support, configurable icon sizing, and UI behavior extensions to the Impreza `Color Scheme Switch` element.
 
